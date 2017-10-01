@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Number Convert">
+	<meta name="keywords" content="countdown,summer">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Number Convert</title>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/convertNumberToWords.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.num').on('change', function() {
+                var value = $(this).val();
+                if (value) {
+                    $('.result').html(NumberConverter.numberToWords(value));
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+	<h3>Convert Number to words</h3>
+    <input class="num" type="text" value="" />
+    <div class="result"></div>
+</body>
+</html>
